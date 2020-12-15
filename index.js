@@ -1,14 +1,6 @@
 #!/usr/bin/env node
 
-/**
- * TODO: Create CLI command
- * TODO: Add advanced commands
- * TODO: Create package
- * TODO: Test package
- * TODO: Review code
- * TODO: Publish package
- * TODO: Change GIT source to Public
- */
+// TODO: Add advanced commands
 
 const { exec } = require('child_process')
 const readline = require('readline')

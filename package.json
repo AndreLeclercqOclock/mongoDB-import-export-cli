@@ -1,5 +1,5 @@
 {
-  "name": "mcli",
+  "name": "mongoDB-import-export-cli",
   "version": "1.0.2",
   "description": "Import and Export mongoDB collection to JSON file.",
   "main": "index.js",
@@ -8,6 +8,10 @@
   },
   "bin": {
     "mcli": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndreLeclercq/mongoDB-import-export-cli.git"
   },
   "keywords": [
     "nodejs",
@@ -18,5 +22,9 @@
   ],
   "author": "André LECLERCQ",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AndreLeclercq/mongoDB-import-export-cli/issues"
+  },
+  "homepage": "https://github.com/AndreLeclercq/mongoDB-import-export-cli#readme",
   "dependencies": {}
 }
