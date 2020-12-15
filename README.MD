@@ -18,7 +18,7 @@ Install the package in Global `npm i -g mcli`
 - Export : `mcli export --c=collection_name`
 - Help : `mcli help`
 
-### Advanced (TODO)
+### Advanced (Not yet ready)
 **Coming Soon ;)**
 - Import from specific file (other than default config) `mcli import --c=collection_name --f=my-folder/my-file.json`
 - Export to specific file (other than default config) `mcli export --c=collection_name --f=my-folder/my-file.json`
@@ -26,7 +26,7 @@ Install the package in Global `npm i -g mcli`
 ## Links
 * [Sources From Github](https://github.com/AndreLeclercq/mongoDB-import-export-cli)
 
-* [NPM package](https://www.npmjs.com/package/mcli)
+* [NPM package](https://www.npmjs.com/package/mongoDB-import-export-cli)
 
 * [Buy my a coffee](https://www.buymeacoffee.com/aleclercq) ☕
 
