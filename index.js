@@ -14,10 +14,6 @@ const { exec } = require('child_process')
 const readline = require('readline')
 const config = require('./config.json')
 const fs = require('fs')
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-})
 let dataConfig = config
 let collection
 
@@ -27,25 +23,13 @@ process.argv.forEach(a => {
     }
 })
 
-checkConfigDb()
-
-if(process.argv.includes('config')){
+if(config.db === '' || config.folder === ''){
+    editConfig()
+} else if(process.argv.includes('config')){
     if(process.argv.includes('show')){
         console.log(config)
     } else if (process.argv.includes('edit')){
-        const rl = readline.createInterface({
-            input: process.stdin,
-            output: process.stdout
-        })
-        rl.question(`What's your database Name ? `, (dbName) => {
-            rl.question(`What's the default folder to save JSON files ? `, (folder) => {
-                dataConfig.db = dbName
-                dataConfig.folder = folder
-                console.log('The config file has been updated')
-                rl.close()
-                writeConfig()
-            })
-        })
+        editConfig()
     }
 } else if(process.argv.includes('export')){
     if(collection){
@@ -88,28 +72,21 @@ if(process.argv.includes('config')){
     console.log('')
 }
 
-function checkConfigDb(){
-    if(config.db === ''){
-        console.log('Database Name not defined')
-        rl.question(`What's your database Name ? `, (dbName) => {
-            dataConfig.db = dbName
-            checkConfigFolder()
-        })
-    } else checkConfigFolder()
-}
 
-function checkConfigFolder(){
-    if(config.folder === '') {
-        console.log('Default folder to export/import JSON files not defined')
+function editConfig(){
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    })
+    rl.question(`What's your database Name ? `, (dbName) => {
         rl.question(`What's the default folder to save JSON files ? `, (folder) => {
+            dataConfig.db = dbName
             dataConfig.folder = folder
+            console.log('The config file has been updated')
             rl.close()
             writeConfig()
         })
-    } else {
-        rl.close()
-        writeConfig()
-    }
+    })
 }
 
 function writeConfig(){
