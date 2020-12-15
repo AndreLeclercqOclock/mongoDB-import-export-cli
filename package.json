@@ -17,5 +17,6 @@
     "cli"
   ],
   "author": "André LECLERCQ",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {}
 }

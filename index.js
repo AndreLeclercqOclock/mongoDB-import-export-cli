@@ -12,7 +12,7 @@
 
 const { exec } = require('child_process')
 const readline = require('readline')
-const config = require('./config.json')
+const config = require('./config_mcli.json')
 const fs = require('fs')
 let dataConfig = config
 let collection
@@ -90,5 +90,5 @@ function editConfig(){
 }
 
 function writeConfig(){
-    fs.writeFile('./config.json', JSON.stringify(dataConfig, null, 4), e => e ? console.log(e) : null)
+    fs.writeFile('./node_modules/mcli/config_mcli.json', JSON.stringify(dataConfig, null, 4), e => e ? console.log(e) : null)
 }
