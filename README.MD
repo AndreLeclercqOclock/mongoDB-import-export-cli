@@ -26,7 +26,7 @@ Install the package in Global `npm i -g mcli`
 ## Links
 * [Sources From Github](https://github.com/AndreLeclercq/mongoDB-import-export-cli)
 
-* [NPM package](https://www.npmjs.com/package/mongoDB-import-export-cli)
+* [NPM package](https://www.npmjs.com/package/mongodb-import-export-cli)
 
 * [Buy my a coffee](https://www.buymeacoffee.com/aleclercq) ☕
 
