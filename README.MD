@@ -1,6 +1,8 @@
 #mongoDB-import-export-cli
+
 Import and Export mongoDB collection to JSON file.
 You can use it for database versionning or just export/import your DB.
+Works only in localhost mongodb://localhost/
 
 ## Install
 You need to have MongoDB on your computer/server. [Read Mongo Docs](https://docs.mongodb.com/manual/installation/)
@@ -16,7 +18,8 @@ Install the package in Global `npm i -g mcli`
 - Export : `mcli export --c=collection_name`
 - Help : `mcli help`
 
-### Advanced
+### Advanced (TODO)
+**Coming Soon ;)**
 - Import from specific file (other than default config) `mcli import --c=collection_name --f=my-folder/my-file.json`
 - Export to specific file (other than default config) `mcli export --c=collection_name --f=my-folder/my-file.json`
 
