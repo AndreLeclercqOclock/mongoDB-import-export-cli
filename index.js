@@ -82,5 +82,5 @@ function editConfig(){
 }
 
 function writeConfig(){
-    fs.writeFile('./node_modules/mcli/config_mcli.json', JSON.stringify(dataConfig, null, 4), e => e ? console.log(e) : null)
+    fs.writeFile('./node_modules/mongodb-import-export-cli/config_mcli.json', JSON.stringify(dataConfig, null, 4), e => e ? console.log(e) : null)
 }
