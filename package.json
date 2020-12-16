@@ -1,6 +1,6 @@
 {
   "name": "mongodb-import-export-cli",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Import and Export mongoDB collection to JSON file.",
   "main": "./index.js",
   "scripts": {
