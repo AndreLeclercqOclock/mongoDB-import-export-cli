@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-// TODO: Add advanced commands
 // TODO: Add backup commands
 
 const { exec } = require('child_process')
