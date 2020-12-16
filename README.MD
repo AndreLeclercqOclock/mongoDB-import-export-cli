@@ -24,18 +24,14 @@ __Doesn't work in global.__
 - Help : `mcli help`
 
 ### Advanced
-**Coming Soon ;)**
-
+- Import from specific file (other than default config) `mcli import --c=collection_name --j=my-folder/my-file.json`
+- Export to specific file (other than default config) `mcli export --c=collection_name --j=my-folder/my-file.json`
 
 ## ToDo
 
-### Advanced Command
-- Import from specific file (other than default config) `mcli import --c=collection_name --f=my-folder/my-file.json`
-- Export to specific file (other than default config) `mcli export --c=collection_name --f=my-folder/my-file.json`
-
 ### Database BackUp 
-- Create a complete database backup in new folder.
-- Create and Compress a complete database backup in tar.gz archive.
+- Create a complete database backup in new folder. `mcli backup --d=my-directory`
+- Create and Compress a complete database backup in tar.gz archive. `mcli backup --tar --d=my-directory`
 
 ## Links
 * [Sources From Github](https://github.com/AndreLeclercq/mongoDB-import-export-cli)

@@ -1,19 +1,30 @@
 #!/usr/bin/env node
 
 // TODO: Add advanced commands
+// TODO: Add backup commands
 
 const { exec } = require('child_process')
 const readline = require('readline')
 const config = require('./config_mcli.json')
 const fs = require('fs')
 let dataConfig = config
-let collection
+let collection = ''
+let jsonFile = ''
+
 
 process.argv.forEach(a => {
     if (a.substring(0, 4) === '--c=') {
         collection = a.replace(a.substring(0, 4), '')
+    } else if (a.substring(0, 4) === '--j='){
+        jsonFile = a.replace(a.substring(0, 4), '')
     }
 })
+
+if(jsonFile !== ''){
+    jsonFile = `${config.folder}/${collection}.json`
+} else if(jsonFile.substring(0, -5) !== '.json') {
+    jsonFile += '.json'
+}
 
 if(config.db === '' || config.folder === ''){
     editConfig()
@@ -24,8 +35,8 @@ if(config.db === '' || config.folder === ''){
         editConfig()
     }
 } else if(process.argv.includes('export')){
-    if(collection){
-        exec(`mongoexport --collection=${collection} --db=${config.db} --out=${config.folder}/${collection}.json`, (e, stdout, stderr) => {
+    if(collection !== ''){
+        exec(`mongoexport --collection=${collection} --db=${config.db} --out=${jsonFile}`, (e, stdout, stderr) => {
             if (e) {
                 console.log(`error: ${e.message}`)
                 return
@@ -40,7 +51,7 @@ if(config.db === '' || config.folder === ''){
 
 } else if(process.argv.includes('import')){
     if(collection){
-        exec(`mongoimport --collection=${collection} --db=${config.db} --drop --file=${config.folder}/${collection}.json`, (e, stdout, stderr) => {
+        exec(`mongoimport --collection=${collection} --db=${config.db} --drop --file=${jsonFile}`, (e, stdout, stderr) => {
             if (e) {
                 console.log(`error: ${e.message}`)
                 return
@@ -60,6 +71,8 @@ if(config.db === '' || config.folder === ''){
     console.log(" config show (Show config file)")
     console.log(" import --c=myCollection (Import collection 'myCollection' from JSON file)")
     console.log(" export --c=myCollection (Export collection 'myCollection' to JSON file)")
+    console.log(" import --c=myCollection --j=my-folder/my-file.json (Import collection 'MyCollection' from specific JSON file")
+    console.log(" export --c=myCollection --j=my-folder/my-file.json (Export collection 'MyCollection' to specific JSON file")
     console.log(" help (List all commands)")
     console.log('')
 }
@@ -73,6 +86,8 @@ function editConfig(){
     rl.question(`What's your database Name ? `, (dbName) => {
         rl.question(`What's the default folder to save JSON files ? `, (folder) => {
             dataConfig.db = dbName
+            if(folder.slice(-1) === '/')
+                folder = folder.slice(0, -1)
             dataConfig.folder = folder
             console.log('The config file has been updated')
             rl.close()
