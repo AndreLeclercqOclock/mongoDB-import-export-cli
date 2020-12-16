@@ -9,7 +9,7 @@ Works only in localhost mongodb://localhost/
 ## Install
 You need to have MongoDB on your computer/server. [Read Mongo Docs](https://docs.mongodb.com/manual/installation/)
 
-Install the package in Global `npm i -g mongodb-import-export-cli`
+Install the package in Global `npm i mongodb-import-export-cli`
 
 ## Use it (command)
 
