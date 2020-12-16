@@ -2,7 +2,7 @@
   "name": "mongodb-import-export-cli",
   "version": "1.0.6",
   "description": "Import and Export mongoDB collection to JSON file.",
-  "main": "index.js",
+  "main": "./index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -25,6 +25,6 @@
   "bugs": {
     "url": "https://github.com/AndreLeclercq/mongoDB-import-export-cli/issues"
   },
-  "homepage": "https://github.com/AndreLeclercq/mongodb-import-export-cli#readme",
+  "homepage": "https://github.com/AndreLeclercq/mongoDB-import-export-cli#readme",
   "dependencies": {}
 }
