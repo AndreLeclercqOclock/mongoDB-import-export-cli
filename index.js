@@ -14,14 +14,14 @@ let jsonFile = ''
 process.argv.forEach(a => {
     if (a.substring(0, 4) === '--c=') {
         collection = a.replace(a.substring(0, 4), '')
-    } else if (a.substring(0, 4) === '--j='){
+    } else if (a.substring(0, 4) === '--f='){
         jsonFile = a.replace(a.substring(0, 4), '')
     }
 })
 
-if(jsonFile !== ''){
+if(jsonFile === ''){
     jsonFile = `${config.folder}/${collection}.json`
-} else if(jsonFile.substring(0, -5) !== '.json') {
+} else if(jsonFile.substr(jsonFile.length - 5) !== '.json') {
     jsonFile += '.json'
 }
 
@@ -64,14 +64,14 @@ if(config.db === '' || config.folder === ''){
     } else console.log('Collection not defined, add arguments --c=collection in your command line')
 } else if(process.argv.includes('help')){
     console.log('')
-    console.log("Usage : mcli <command>")
+    console.log("Usage : mcli < command >")
     console.log("where command is one of :")
     console.log(" config edit (Edit config file)")
     console.log(" config show (Show config file)")
     console.log(" import --c=myCollection (Import collection 'myCollection' from JSON file)")
     console.log(" export --c=myCollection (Export collection 'myCollection' to JSON file)")
-    console.log(" import --c=myCollection --j=my-folder/my-file.json (Import collection 'MyCollection' from specific JSON file")
-    console.log(" export --c=myCollection --j=my-folder/my-file.json (Export collection 'MyCollection' to specific JSON file")
+    console.log(" import --c=myCollection --f=my-folder/my-file.json (Import collection 'MyCollection' from specific JSON file")
+    console.log(" export --c=myCollection --f=my-folder/my-file.json (Export collection 'MyCollection' to specific JSON file")
     console.log(" help (List all commands)")
     console.log('')
 }

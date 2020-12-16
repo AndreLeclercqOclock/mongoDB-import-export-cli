@@ -24,8 +24,8 @@ __Doesn't work in global.__
 - Help : `mcli help`
 
 ### Advanced
-- Import from specific file (other than default config) `mcli import --c=collection_name --j=my-folder/my-file.json`
-- Export to specific file (other than default config) `mcli export --c=collection_name --j=my-folder/my-file.json`
+- Import from specific file (other than default config) `mcli import --c=collection_name --f=my-folder/my-file.json`
+- Export to specific file (other than default config) `mcli export --c=collection_name --f=my-folder/my-file.json`
 
 ## ToDo
 

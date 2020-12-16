@@ -1,5 +1,5 @@
-# v1.1.x (2020.12.16)
+# v1.2.x (2020.12.16)
 - Add ChangeLog
 - Auto Remove last "/" on default folder config
-- Add command "mcli import --c=collection_name --j=my-folder/my-file.json"
-- Add command "mcli export --c=collection_name --j=my-folder/my-file.json"
+- Add command "mcli import --c=collection_name --f=my-folder/my-file.json"
+- Add command "mcli export --c=collection_name --f=my-folder/my-file.json"
