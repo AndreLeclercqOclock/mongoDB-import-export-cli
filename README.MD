@@ -1,5 +1,7 @@
 # mongoDB-import-export-cli
 
+**THIS PROJECT IS DEPENDENCIES FREE**
+
 Import and Export mongoDB collection to JSON file and create Backup from your database.
 You can use it for database versionning or just export/import your DB.
 Works only in localhost mongodb://localhost/.

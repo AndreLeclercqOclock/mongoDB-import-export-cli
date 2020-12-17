@@ -1,12 +1,12 @@
-# v1.2.x (2020.12.16)
-- Add ChangeLog
-- Auto Remove last "/" on default folder config
-- Add command "mcli import --c=collection_name --f=my-folder/my-file.json"
-- Add command "mcli export --c=collection_name --f=my-folder/my-file.json"
-
 # v1.3.x (2020-12-17)
 - Update ReadMe
 - Add comments on index.js
 - Refacto and clean index.js
 - Add 'mcli backup' command
 - Add 'mcli backup --tar' command
+
+# v1.2.x (2020.12.16)
+- Add ChangeLog
+- Auto Remove last "/" on default folder config
+- Add command "mcli import --c=collection_name --f=my-folder/my-file.json"
+- Add command "mcli export --c=collection_name --f=my-folder/my-file.json"
