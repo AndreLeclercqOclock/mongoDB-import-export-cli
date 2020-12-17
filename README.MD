@@ -1,6 +1,6 @@
 # mongoDB-import-export-cli
 
-Import and Export mongoDB collection to JSON file.
+Import and Export mongoDB collection to JSON file and create Backup from your database.
 You can use it for database versionning or just export/import your DB.
 Works only in localhost mongodb://localhost/.
 
@@ -16,22 +16,35 @@ __Doesn't work in global.__
 
 ## Use it (command)
 
-### Basics
+### Config & Help
 - Edit Config : `mcli config edit`
 - Show Config : `mcli config show`
-- Import : `mcli import --c=collection_name`
-- Export : `mcli export --c=collection_name`
 - Help : `mcli help`
 
-### Advanced
-- Import from specific file (other than default config) `mcli import --c=collection_name --f=my-folder/my-file.json`
-- Export to specific file (other than default config) `mcli export --c=collection_name --f=my-folder/my-file.json`
+### Import / Export Collection(s)
+
+- Import Collection : `mcli import --c=collection_name`
+- Export Collection : `mcli export --c=collection_name`
+- Import Collection from specific file :
+
+`mcli import --c=collection_name --f=my-folder/my-file.json`
+- Export Collection to specific file :
+  
+`mcli export --c=collection_name --f=my-folder/my-file.json`
+
+### BackUp / Restore Database
+
+- BackUp Database : `mcli backup`
+- BackUp and compress (tar.gz) Database : `mcli backup --tar`
 
 ## ToDo
 
-### Database BackUp 
-- Create a complete database backup in new folder. `mcli backup --d=my-directory`
-- Create and Compress a complete database backup in tar.gz archive. `mcli backup --tar --d=my-directory`
+### Multiple Import/Export
+- Add multiple Import `mcli import --c=collection1,collection2`
+- Add multiple Export `mcli export --c=collection1,collection2`
+
+### Restore
+- Add Restore from backup directory or archive
 
 ## Links
 * [Sources From Github](https://github.com/AndreLeclercq/mongoDB-import-export-cli)
