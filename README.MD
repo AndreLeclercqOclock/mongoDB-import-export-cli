@@ -7,7 +7,7 @@ You can use it for database versionning or just export/import your DB.
 Works only in localhost mongodb://localhost/.
 
 ## Help Me
-This project need your help, if you find bug you can create a new issue [here](https://github.com/AndreLeclercq/mongoDB-import-export-cli/issues)
+This project need your help, if you find any bug you can create a new issue [here](https://github.com/AndreLeclercq/mongoDB-import-export-cli/issues)
 
 ## Install
 You need to have MongoDB on your computer/server. [Read Mongo Docs](https://docs.mongodb.com/manual/installation/)
