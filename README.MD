@@ -11,6 +11,8 @@ This project need your help, if you find any bug you can create a new issue [her
 
 ## Install
 You need to have MongoDB on your computer/server. [Read Mongo Docs](https://docs.mongodb.com/manual/installation/)
+If you have a version later than 4.2 you need to install the MongoDB database tool with the command line (mongoimport, mongoexport...) 
+[Download](https://www.mongodb.com/try/download/database-tools) - [Doc](https://docs.mongodb.com/database-tools/).
 
 Install the package `npm i mongodb-import-export-cli`
 
