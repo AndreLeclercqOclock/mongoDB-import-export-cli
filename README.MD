@@ -14,7 +14,17 @@ You need to have MongoDB on your computer/server. [Read Mongo Docs](https://docs
 If you have a version later than 4.2 you need to install the MongoDB database tool with the command line (mongoimport, mongoexport...) 
 [Download](https://www.mongodb.com/try/download/database-tools) - [Doc](https://docs.mongodb.com/database-tools/).
 
-Install the package `npm i mongodb-import-export-cli`
+Install the package
+
+```shell
+npm i mongodb-import-export-cli
+```
+
+If the `mcli` command not found use :
+
+```shell
+npm link mongodb-import-export-cli
+```
 
 __Doesn't work in global.__
 
@@ -56,6 +66,12 @@ __Doesn't work in global.__
 * [NPM package](https://www.npmjs.com/package/mongodb-import-export-cli)
 
 * [Buy my a coffee](https://www.buymeacoffee.com/aleclercq) ☕
+
+## Known Issues
+
+### When I use the command "mcli" I get a message saying "command not found".
+
+Use this command `npm link mongodb-import-export-cli` 
 
 ## Licence
 
